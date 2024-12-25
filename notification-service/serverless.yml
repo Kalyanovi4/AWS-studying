@@ -1,0 +1,34 @@
+# "org" ensures this Service is used with the correct Serverless Framework Access Key.
+org: awslearninguser
+# "app" enables Serverless Framework Dashboard features and sharing them with other Services.
+app: notification-service
+# "service" is the name of this project. This will also be added to your AWS resource names.
+service: notification-service
+
+provider:
+  name: aws
+  runtime: nodejs20.x
+  memorySize: 256
+  region: eu-west-1
+  stage: ${opt:stage, 'dev'}
+  iamRoleStatements:
+    - ${file(iam/SendMailIAM.yml):SendMailIAM}
+resources:
+  Resources:
+    MailQueue: ${file(resources/MailQueue.yml):MailQueue}
+  Outputs:
+    MailQueueArn: ${file(resources/MailQueue.yml):Outputs.MailQueueArn}
+    MailQueueUrl: ${file(resources/MailQueue.yml):Outputs.MailQueueUrl}
+
+functions:
+  sendMail:
+    handler: src/handlers/sendMail.handler
+    events:
+      - sqs:
+          arn: ${self:custom.mailQueue.arn}
+          batchSize: 1
+custom:
+  mailQueue:
+    name: MailQueue-${self:provider.stage}
+    arn: !GetAtt MailQueue.Arn
+    url: !Ref MailQueue

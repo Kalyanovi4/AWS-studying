@@ -1,0 +1,198 @@
+{
+  "unknown": {
+    "versionSfCore": null,
+    "versionFramework": "4.4.18",
+    "isWithinCompose": false,
+    "composeOrgName": null,
+    "composeServiceName": null,
+    "command": [],
+    "options": {},
+    "error": null,
+    "machineId": "8c2cf42830653de947ace10aec84fe02",
+    "serviceProviderAwsCfStackId": null,
+    "serviceProviderAwsCfStackCreated": null,
+    "serviceProviderAwsCfStackUpdated": null,
+    "serviceProviderAwsCfStackStatus": null,
+    "serviceProviderAwsCfStackOutputs": null
+  },
+  "D:\\Programing\\Studying\\AWS course": {
+    "versionSfCore": null,
+    "versionFramework": "4.4.13",
+    "isWithinCompose": false,
+    "isCompose": false,
+    "composeOrgName": null,
+    "composeResolverProviders": {
+      "opt": {
+        "instance": {
+          "credentials": "<REDACTED>",
+          "serviceConfigFile": {
+            "service": "sls-base",
+            "plugins": [
+              "serverless-pseudo-parameters"
+            ],
+            "provider": {
+              "name": "aws",
+              "runtime": "nodejs20.x",
+              "memorySize": 256,
+              "stage": "dev",
+              "region": "us-east-1",
+              "versionFunctions": true
+            },
+            "functions": {
+              "hello": {
+                "handler": "src/handlers/hello.handler",
+                "events": [
+                  {
+                    "http": {
+                      "method": "GET",
+                      "path": "/hello"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "configFileDirPath": "D:\\Programing\\Studying\\AWS course",
+          "config": {
+            "type": "opt"
+          },
+          "options": {
+            "name": "auction_service",
+            "template-url": "https://github.com/codingly-io/sls-base"
+          },
+          "logger": {
+            "namespace": "s:core:resolver:opt",
+            "prefix": null,
+            "prefixColor": null
+          },
+          "_credentialsPromise": "<REDACTED>"
+        },
+        "resolvers": {}
+      },
+      "default-aws-credential-resolver": "<REDACTED>",
+      "sls": {
+        "instance": {
+          "credentials": "<REDACTED>",
+          "serviceConfigFile": {
+            "service": "sls-base",
+            "plugins": [
+              "serverless-pseudo-parameters"
+            ],
+            "provider": {
+              "name": "aws",
+              "runtime": "nodejs20.x",
+              "memorySize": 256,
+              "stage": "dev",
+              "region": "us-east-1",
+              "versionFunctions": true
+            },
+            "functions": {
+              "hello": {
+                "handler": "src/handlers/hello.handler",
+                "events": [
+                  {
+                    "http": {
+                      "method": "GET",
+                      "path": "/hello"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "configFileDirPath": "D:\\Programing\\Studying\\AWS course",
+          "config": {
+            "type": "sls"
+          },
+          "options": {
+            "name": "auction_service",
+            "template-url": "https://github.com/codingly-io/sls-base"
+          },
+          "stage": "dev",
+          "dashboard": null,
+          "logger": {
+            "namespace": "s:core:resolver:sls",
+            "prefix": null,
+            "prefixColor": null
+          },
+          "_credentialsPromise": "<REDACTED>"
+        },
+        "resolvers": {}
+      }
+    },
+    "composeServiceName": null,
+    "servicePath": "D:\\Programing\\Studying\\AWS course",
+    "serviceConfigFileName": "serverless.yml",
+    "service": {
+      "service": "sls-base",
+      "plugins": [
+        "serverless-pseudo-parameters"
+      ],
+      "provider": {
+        "name": "aws",
+        "runtime": "nodejs20.x",
+        "memorySize": 256,
+        "stage": "dev",
+        "region": "us-east-1",
+        "versionFunctions": true
+      },
+      "functions": {
+        "hello": {
+          "handler": "src/handlers/hello.handler",
+          "events": [
+            {
+              "http": {
+                "method": "GET",
+                "path": "/hello"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "serviceRawFile": "service: sls-base\r\n\r\nplugins:\r\n  - serverless-pseudo-parameters\r\n\r\nprovider:\r\n  name: aws\r\n  runtime: nodejs20.x\r\n  memorySize: 256\r\n  stage: ${opt:stage, 'dev'}\r\n\r\nfunctions:\r\n  hello:\r\n    handler: src/handlers/hello.handler\r\n    events:\r\n      - http:\r\n          method: GET\r\n          path: /hello\r\n",
+    "command": [
+      "create"
+    ],
+    "options": {
+      "name": "auction_service",
+      "template-url": "https://github.com/codingly-io/sls-base"
+    },
+    "error": {
+      "message": "The \"create\" command was deprecated in v4. To create a new project, run the \"serverless\" command instead.",
+      "code": "UNRECOGNIZED_CLI_COMMAND"
+    },
+    "params": {},
+    "machineId": "8c2cf42830653de947ace10aec84fe02",
+    "stage": "dev",
+    "accessKeyV2": "<REDACTED>",
+    "accessKeyV1": "<REDACTED>",
+    "orgId": "b143c642-3303-476b-8d30-6af579bfe0e6",
+    "orgName": "studyingaws",
+    "userId": "Km3q99cYqD2RgXZBhy",
+    "dashboard": {
+      "isEnabledForService": false,
+      "requiredAuthentication": false,
+      "orgFeaturesInUse": null,
+      "orgObservabilityIntegrations": null,
+      "serviceAppId": null,
+      "serviceProvider": null,
+      "instanceParameters": null
+    },
+    "userName": "studyingaws",
+    "subscription": null,
+    "userEmail": "kushnir.mykolaa@gmail.com",
+    "serviceProviderAwsRegion": "us-east-1",
+    "serviceProviderAwsCredentials": "<REDACTED>",
+    "serviceProviderAwsAccountId": "872515259357",
+    "projectType": "traditional",
+    "versionSf": "4.4.13",
+    "serviceProviderAwsCfStackName": "sls-base-dev",
+    "serviceUniqueId": null,
+    "serviceProviderAwsCfStackId": null,
+    "serviceProviderAwsCfStackCreated": null,
+    "serviceProviderAwsCfStackUpdated": null,
+    "serviceProviderAwsCfStackStatus": null,
+    "serviceProviderAwsCfStackOutputs": null
+  }
+}

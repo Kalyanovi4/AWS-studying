@@ -1,0 +1,17 @@
+{
+  "name": "notification-service",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.585.0",
+    "@aws-sdk/lib-dynamodb": "^3.585.0",
+    "aws-sdk": "^2.1692.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^9.2.1",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "express": "^4.19.2",
+    "serverless-http": "^3.2.0"
+  }
+}

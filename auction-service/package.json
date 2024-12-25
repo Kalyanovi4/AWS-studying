@@ -1,0 +1,22 @@
+{
+  "name": "auction-service",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "<!-- title: 'AWS NodeJS Example' description: 'This template demonstrates how to deploy a simple NodeJS function running on AWS Lambda using the Serverless Framework.' layout: Doc framework: v4 platform: AWS language: nodeJS priority: 1 authorLink: 'https://github.com/serverless' authorName: 'Serverless, Inc.' authorAvatar: 'https://avatars1.githubusercontent.com/u/13742415?s=200&v=4' -->",
+  "main": "handler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@middy/core": "^6.0.0",
+    "@middy/http-error-handler": "^6.0.0",
+    "@middy/http-event-normalizer": "^6.0.0",
+    "@middy/http-json-body-parser": "^6.0.0",
+    "@middy/validator": "^6.0.0",
+    "aws-sdk": "^2.1692.0",
+    "http-errors": "^2.0.0",
+    "uuid": "^11.0.3"
+  }
+}
